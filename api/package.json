@@ -1,0 +1,10 @@
+{
+  "name": "string-analyzer-api",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "@fastify/cors": "^7.0.0",
+    "fastify": "^3.29.0"
+  }
+}
