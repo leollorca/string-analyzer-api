@@ -28,5 +28,20 @@ function analyze() {
 }
 
 function getAnalyze(string) {
-  /* @TODO : To implement */
+  return new Promise(function (resolve, reject) {
+    fetch(`http://localhost:3000/analyze?string=${string}`)
+      .then(function (res) {
+        res
+          .json()
+          .then(function (data) {
+            resolve(data);
+          })
+          .catch(function (error) {
+            reject("Erreur");
+          });
+      })
+      .catch(function (error) {
+        reject("Erreur");
+      });
+  });
 }
